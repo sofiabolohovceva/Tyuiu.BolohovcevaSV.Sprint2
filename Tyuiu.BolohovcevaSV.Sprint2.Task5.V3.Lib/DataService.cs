@@ -1,5 +1,6 @@
 ﻿using System;
 using tyuiu.cources.programming.interfaces.Sprint2;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Tyuiu.BolohovcevaSV.Sprint2.Task5.V3.Lib
 {
@@ -7,34 +8,17 @@ namespace Tyuiu.BolohovcevaSV.Sprint2.Task5.V3.Lib
     {
         public string FindDayName(int value)
         {
-            string res;
             switch (value)
             {
-                case 1:
-                    res = "Понедельник";
-                    break;
-                case 2:
-                    res = "Вторник";
-                    break;
-                case 3:
-                    res = "Среда";
-                    break;
-                case 4:
-                    res = "Четверг";
-                    break;
-                case 5:
-                    res = "Пятница";
-                    break;
-                case 6:
-                    res = "Суббота";
-                    break;
-                case 7:
-                    res = "Воскресенье";
-                    break;
-                default:
-                    throw new ArgumentException($"Неделя должна быть от 1 до 7. Значение {value}");
+                case 1: return "Понедельник";
+                case 2: return "Вторник";
+                case 3: return "Среда";
+                case 4: return "Четверг";
+                case 5: return "Пятница";
+                case 6: return "Суббота";
+                case 7: return "Воскресенье";
+                default: return "Такого дня недели нет";
             }
-            return res;
         }
     }
 }

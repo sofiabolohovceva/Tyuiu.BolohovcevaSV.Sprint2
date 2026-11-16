@@ -8,41 +8,29 @@ namespace Tyuiu.BolohovcevaSV.Sprint2.Task5.V3
         static void Main(string[] args)
         {
             DataService ds = new DataService();
-            Console.Title = "Спринт 2 | Выполнила: Болоховцева С. В. | СМАРТб-26-1";
+
+            Console.Title = "Спринт #2 | Выполнила: Болоховцева С.В. | СМАРТб-26-1";
+
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* Спринт 2                                                                *");
-            Console.WriteLine("* Тема: Операции сравнения                                                *");
-            Console.WriteLine("* Задание №0                                                              *");
-            Console.WriteLine("* Вариант №6                                                              *");
-            Console.WriteLine("* Выполнила: Болоховцева София Вячеславовна | СМАРТб-26-1                 *");
+            Console.WriteLine("* Спринт #2                                                               *");
+            Console.WriteLine("* Тема: Оператор switch                                                   *");
+            Console.WriteLine("* Задание #6                                                              *");
+            Console.WriteLine("* Вариант #3                                                              *");
+            Console.WriteLine("* Выполнила: Болоховцева С.В. | СМАРТб-26-1                               *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Вывести название дня недели по его порядковому номеру                   *");
-            Console.WriteLine("*                                                                         *");
+            Console.WriteLine("* По порядковому номеру дня недели определить его название.              *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
+            Console.WriteLine("* Введите номер дня недели:                                               *");
 
-            Console.WriteLine("Введите номер дня недели: ");
-            int NumDay = Convert.ToInt32(Console.ReadLine());
-
-            string res;
-            
-            if ((NumDay < 1) || (NumDay > 7))
-            {
-                res = "Введено неверное значение";
-            }
-            else
-            {
-                res = "Это день: " + ds.FindDayName(NumDay);
-            }
+            int number = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+            Console.WriteLine("* " + ds.FindDayName(number));
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine(res);
-            
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
